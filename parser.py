@@ -1,5 +1,6 @@
 
 import sys
+import Pddlpy
 from  pddlpy import DomainProblem
 
 def main():
