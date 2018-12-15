@@ -1,3 +1,3 @@
 #!/usr/bin/env python3
 def Astar():
-    print("Hi Astar")
+    print("Not imlemented A star")
