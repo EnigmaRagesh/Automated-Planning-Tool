@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 from parser import PDDL_Parser
 
-class Propositional_Planner:
-
+class Astar_planner:
     #-----------------------------------------------
     # Solve
     #-----------------------------------------------
-
     def solve(self, domain, problem):
         # Parser
         parser = PDDL_Parser()
@@ -44,7 +42,6 @@ class Propositional_Planner:
     #-----------------------------------------------
     # Applicable
     #-----------------------------------------------
-
     def applicable(self, state, positive, negative):
         for i in positive:
             if i not in state:
