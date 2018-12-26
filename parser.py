@@ -33,16 +33,22 @@ class PDDL_Parser:
     # ------------------------------------------
 
     def scan_tokens(self, filename):
+        '''
+        Scan the entire PDDL file and store in the form of list
+        '''
+        # open PDDL file and convert into lower case
         with open(filename,'r') as f:
-            # Remove single line comments
             str = re.sub(r';.*$', '', f.read(), flags=re.MULTILINE).lower()
         # Tokenize
         stack = []
         list = []
+        # iterate throught the entire PDDL file
         for t in re.findall(r'[()]|[^\s()]+', str):
+            # append temp list from open parantheses
             if t == '(':
                 stack.append(list)
                 list = []
+            # pop temp list and append to main list
             elif t == ')':
                 if stack:
                     l = list
