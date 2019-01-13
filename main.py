@@ -41,8 +41,9 @@ if __name__ == "__main__":
     '''
     planner = Astar_planner()
     plan = planner.solve(domain, problem)
+    
     if plan:
-        print('plan:')
+        print('\n\nplan:')
         for act in plan:
             print(act)
     else:
