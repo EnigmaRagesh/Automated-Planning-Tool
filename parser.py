@@ -82,8 +82,6 @@ class PDDL_Parser:
                     pass # TODO
                 elif t == ':predicates':
                     pass # TODO
-                elif t == ':types':
-                    pass # TODO
                 elif t == ':action':
                     self.parse_action(group)
                 else: print(str(t) + ' is not recognized in domain')
@@ -139,8 +137,8 @@ class PDDL_Parser:
                 elif t == ':domain':
                     if self.domain_name != group[-1]:
                         raise Exception('Different domain specified in problem file')
-                elif t == ':requirements':
-                    pass # TODO
+                # elif t == ':requirements':
+                #     pass # TODO
                 elif t == ':objects':
                     group.pop(0)
                     self.objects = group

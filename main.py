@@ -15,11 +15,7 @@ if __name__ == "__main__":
     domain = "./PDDL/domain_2.pddl"   #contains init and goal states
     problem = "./PDDL/problem2.pddl"       #contains problme description
     parser = PDDL_Parser()
-    print('----------------------------')
-    pprint.pprint(parser.scan_tokens(domain))   #store pddl domain into list
-    print('----------------------------')
-    pprint.pprint(parser.scan_tokens(problem))  #store pddl problem into lsit 
-    print('----------------------------')
+
     '''
     PDDL grounded form
     '''
@@ -36,16 +32,4 @@ if __name__ == "__main__":
     print('\nState: ' + str(parser.state))
     print('\nPositive goals: ' + str(parser.positive_goals))
     print('\nNegative goals: ' + str(parser.negative_goals))
-    '''
-    A star planner
-    '''
-    planner = Astar_planner()
-    plan = planner.solve(domain, problem)
     
-    if plan:
-        print('\n\nplan:')
-        for act in plan:
-            print(act)
-    else:
-        print('No plan was found')
-    # Astar()

@@ -5,8 +5,8 @@
             (dinner)
             (quiet)
             (present)
-            (garbage)
-  )
+            (garbage))
+            
   (:action cook
     :parameters ()
     :precondition (and
